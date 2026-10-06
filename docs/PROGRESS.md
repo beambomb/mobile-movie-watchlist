@@ -13,6 +13,20 @@ Dokumen ini melacak riwayat progres pengerjaan, milestone aktif, dan catatan com
 
 ## 2. Riwayat Catatan Progres (Changelog)
 
+### [2026-10-06] - Refaktor Arsitektur Backend (Separation of Concerns / MVC)
+* **Pencapaian:**
+  - Memecah struktur ackend/server.js menjadi arsitektur modular berlapis:
+    - config/db.js: Penanganan inisialisasi dan baca/tulis file storage.
+    - models/watchlistModel.js: Abstraksi operasi manipulasi data (CRUD).
+    - controllers/watchlistController.js: Penanganan alur request-response HTTP.
+    - 
+outes/watchlistRoutes.js: Definisi rute REST API.
+    - middlewares/errorHandler.js: Middleware penanganan 404 (Route not found) & 500 (Internal Error).
+    - server.js: Entry point bersih tanpa penumpukan logika.
+  - Menambahkan endpoint root GET / untuk dokumentasi indeks endpoint API.
+* **Verifikasi:** Seluruh endpoint diuji dengan curl, auto-reload 
+ode --watch sukses memuat struktur MVC.
+
 ### [2026-10-06] - Pembuatan REST API Backend (Express.js)
 * **Pencapaian:**
   - Menginisialisasi server Express.js di folder ackend/.
