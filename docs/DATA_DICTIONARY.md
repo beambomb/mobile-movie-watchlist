@@ -59,3 +59,16 @@ Model yang merepresentasikan catatan tontonan pribadi yang disimpan oleh penggun
 * List<WatchlistItem> items: Seluruh data film tersimpan dari storage lokal.
 * String selectedFilter: Filter status aktif (All, Plan to Watch, Watching, Completed).
 * ool isSaving: Indikator saat proses penulisan ke disk sedang berjalan.
+
+---
+
+## 5. Backend REST API Endpoints (Express.js)
+Base URL: http://localhost:5000
+
+| Method | Endpoint | Query / Body Payload | Response | Deskripsi |
+| :--- | :--- | :--- | :--- | :--- |
+| GET | /api/health | - | { status: 'ok', timestamp: '...' } | Health check server status. |
+| GET | /api/watchlist | ?status=All|Plan to Watch|Watching|Completed | List<WatchlistItem> | Mengambil seluruh daftar watchlist (dengan opsi filter). |
+| POST | /api/watchlist | { showId, title, imageUrl, genres, status, userRating, userNotes } | WatchlistItem (201) | Menambahkan film baru ke watchlist. |
+| PUT | /api/watchlist/:id | { status, userRating, userNotes } | WatchlistItem (200) | Memperbarui status, rating, atau review catatan. |
+| DELETE| /api/watchlist/:id | - | { message: '...', id: '...' } (200) | Menghapus item watchlist dari database file. |

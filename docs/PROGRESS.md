@@ -13,6 +13,20 @@ Dokumen ini melacak riwayat progres pengerjaan, milestone aktif, dan catatan com
 
 ## 2. Riwayat Catatan Progres (Changelog)
 
+### [2026-10-06] - Pembuatan REST API Backend (Express.js)
+* **Pencapaian:**
+  - Menginisialisasi server Express.js di folder ackend/.
+  - Mengonfigurasi middleware CORS dan express.json parser.
+  - Membangun full CRUD endpoints untuk Watchlist:
+    - GET /api/watchlist: Ambil seluruh film (dukung filter ?status=).
+    - POST /api/watchlist: Tambah film baru ke watchlist.
+    - PUT /api/watchlist/:id: Update status, rating (1-5), dan review catatan.
+    - DELETE /api/watchlist/:id: Hapus item watchlist berdasarkan ID.
+  - Mengimplementasikan penyimpanan data berbasis file data/watchlist.json (auto-create & auto-save).
+  - Menyiapkan script 
+pm run dev (dengan node --watch bawaan Node.js v24).
+* **Verifikasi:** Server diuji pada port 5000, endpoint /api/health dan /api/watchlist sukses mengembalikan status 200 OK via curl.
+
 ### [2026-10-06] - Reorganisasi ke Fullstack Monorepo
 * **Pencapaian:**
   - Memisahkan arsitektur repositori menjadi pola Monorepo:
