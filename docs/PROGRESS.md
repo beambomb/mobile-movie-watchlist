@@ -5,17 +5,27 @@ Dokumen ini melacak riwayat progres pengerjaan, milestone aktif, dan catatan com
 ---
 
 ## 1. Status Terkini
-* **Milestone Aktif:** Milestone 1 (Inisialisasi Proyek, Dependensi & Design System)
-* **Status Keseluruhan:** Persiapan Aturan (.agents/rules) & Dokumentasi Selesai (100%)
-* **Target Selanjutnya:** Setup flutter project dan integrasi package dasar.
+* **Milestone Aktif:** Milestone 1 (Inisialisasi Monorepo & Setup Design System)
+* **Status Keseluruhan:** Monorepo Restructuring Selesai (Frontend Flutter & Backend Express disiapkan terpisah).
+* **Target Selanjutnya:** Step 2 (Menyiapkan Design System & Dark Mode Minimalis di rontend/lib/).
 
 ---
 
 ## 2. Riwayat Catatan Progres (Changelog)
+
+### [2026-10-06] - Reorganisasi ke Fullstack Monorepo
+* **Pencapaian:**
+  - Memisahkan arsitektur repositori menjadi pola Monorepo:
+    - rontend/: Berisi seluruh aplikasi mobile Flutter (Dart).
+    - ackend/: Disiapkan untuk server REST API (Express.js/Node.js).
+    - docs/: Dokumentasi progres dan kamus data.
+    - .agents/: Aturan kerja AI dan spesifikasi desain.
+  - Memperbarui file .gitignore di root repositori untuk memfilter build artifact Flutter dan node_modules Express.
+  - Menyelaraskan berkas rchitecture.md dengan struktur monorepo baru.
+* **Verifikasi:** Proyek Flutter di rontend/ terisolasi dengan rapi dan dependensi (http, provider, shared_preferences) tetap utuh.
 
 ### [2026-10-06] - Inisialisasi Fondasi & Dokumentasi
 * **Pencapaian:**
   - Selesai merancang blueprint aplikasi hasil interview (Movie Watchlist & Discovery).
   - Menyusun seluruh aturan agen dan batasan teknis di .agents/rules/ (gents.md, design.md, PRD.md, rchitecture.md, specs.md, 	asks.md).
   - Menyiapkan direktori dokumentasi kerja docs/ (PROGRESS.md, DATA_DICTIONARY.md).
-* **Verifikasi:** Semua dokumen terstruktur dengan format standar dan batasan desain yang jelas.
