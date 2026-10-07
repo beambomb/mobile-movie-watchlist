@@ -13,10 +13,10 @@ Dokumen ini adalah peta jalan eksekusi proyek movie_watchlist. Setiap milestone 
 ## Milestone 1: Inisialisasi Proyek, Dependensi & Design System
 Menyiapkan kerangka kerja Flutter, menginstal pustaka yang dibutuhkan, dan mengonfigurasi tema gelap minimalis.
 * **Definition of Done (DoD):**
-  - [ ] Proyek Flutter movie_watchlist berhasil dibuat.
-  - [ ] Dependensi provider, http, dan shared_preferences terpasang di pubspec.yaml.
-  - [ ] pp_colors.dart dan pp_theme.dart terkonfigurasi sesuai aturan design.md (Flat dark mode, border radius 4-8px, no neon/gradient).
-  - [ ] Commit git dibuat setelah inisialisasi dasar selesai.
+  - [x] Proyek Flutter movie_watchlist berhasil dibuat.
+  - [x] Dependensi provider, http, dan shared_preferences terpasang di pubspec.yaml.
+  - [x] app_colors.dart dan app_theme.dart terkonfigurasi sesuai aturan design.md (Flat dark mode, border radius 4-8px, no neon/gradient).
+  - [x] Commit git dibuat setelah inisialisasi dasar selesai.
 
 ---
 

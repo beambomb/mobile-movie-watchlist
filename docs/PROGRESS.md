@@ -5,13 +5,24 @@ Dokumen ini melacak riwayat progres pengerjaan, milestone aktif, dan catatan com
 ---
 
 ## 1. Status Terkini
-* **Milestone Aktif:** Milestone 1 (Inisialisasi Monorepo & Setup Design System)
-* **Status Keseluruhan:** Monorepo Restructuring Selesai (Frontend Flutter & Backend Express disiapkan terpisah).
-* **Target Selanjutnya:** Step 2 (Menyiapkan Design System & Dark Mode Minimalis di rontend/lib/).
+* **Milestone Aktif:** Milestone 2 (Data Models & Storage Service - CRUD Layer)
+* **Status Keseluruhan:** Milestone 1 Selesai (Design system, app colors, app theme minimalis dark mode telah terkonfigurasi dan teruji).
+* **Target Selanjutnya:** Milestone 2 (Pembuatan Show, WatchlistItem model, dan StorageService CRUD).
 
 ---
 
 ## 2. Riwayat Catatan Progres (Changelog)
+
+### [2026-10-07] - Penyelesaian Milestone 1: Setup Design System & Dark Mode Minimalis
+* **Pencapaian:**
+  - Membuat `frontend/lib/constants/app_colors.dart` sesuai palet warna minimalis dark mode `design.md`.
+  - Mengonfigurasi `frontend/lib/constants/app_theme.dart` (Tema gelap flat, radius 4-8px, tanpa warna neon/gradasi).
+  - Mengintegrasikan `AppTheme.darkTheme` ke `frontend/lib/main.dart`.
+  - Memperbarui smoke test `frontend/test/widget_test.dart`.
+* **Verifikasi:**
+  - `flutter analyze`: 0 errors / clean.
+  - `flutter test`: all tests passed.
+
 
 ### [2026-10-06] - Refaktor Arsitektur Backend (Separation of Concerns / MVC)
 * **Pencapaian:**
