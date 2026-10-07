@@ -5,13 +5,24 @@ Dokumen ini melacak riwayat progres pengerjaan, milestone aktif, dan catatan com
 ---
 
 ## 1. Status Terkini
-* **Milestone Aktif:** Milestone 2 (Data Models & Storage Service - CRUD Layer)
-* **Status Keseluruhan:** Milestone 1 Selesai (Design system, app colors, app theme minimalis dark mode telah terkonfigurasi dan teruji).
-* **Target Selanjutnya:** Milestone 2 (Pembuatan Show, WatchlistItem model, dan StorageService CRUD).
+* **Milestone Aktif:** Milestone 3 (API Integration & Explore/Discovery Screen)
+* **Status Keseluruhan:** Milestone 1 & Milestone 2 Selesai (Design system terkonfigurasi, data models Show & WatchlistItem selesai, StorageService CRUD offline-first teruji).
+* **Target Selanjutnya:** Milestone 3 (Implementasi ApiService untuk TVMaze API, MovieProvider, dan ExploreScreen).
 
 ---
 
 ## 2. Riwayat Catatan Progres (Changelog)
+
+### [2026-10-07] - Penyelesaian Milestone 2: Data Models & Storage Service (CRUD Layer)
+* **Pencapaian:**
+  - Membuat model `frontend/lib/models/show.dart` dengan parser `fromJson` (pembersihan tag HTML sinopsis, mapping rating, gambar, dan genre).
+  - Membuat model `frontend/lib/models/watchlist_item.dart` dengan serializer/deserializer `fromJson`, `toJson`, dan helper `copyWith`.
+  - Mengimplementasikan `frontend/lib/services/storage_service.dart` untuk operasi CRUD lengkap berbasis `shared_preferences` dengan key `movie_watchlist_v1` (termasuk safe handling data kosong dan corrupt JSON).
+  - Menyusun rangkaian unit test komprehensif di `frontend/test/models_and_storage_test.dart` mencakup Show parsing, WatchlistItem serialization, dan StorageService CRUD.
+* **Verifikasi:**
+  - `flutter test`: 8/8 tests passed (100% lulus).
+  - `flutter analyze`: 0 issues found (clean).
+
 
 ### [2026-10-07] - Penyelesaian Milestone 1: Setup Design System & Dark Mode Minimalis
 * **Pencapaian:**

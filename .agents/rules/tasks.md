@@ -23,11 +23,11 @@ Menyiapkan kerangka kerja Flutter, menginstal pustaka yang dibutuhkan, dan mengo
 ## Milestone 2: Data Models & Storage Service (CRUD Layer)
 Membangun fondasi data untuk film API dan persistensi Watchlist lokal.
 * **Definition of Done (DoD):**
-  - [ ] Model Show dengan romJson selesai dan teruji parser-nya.
-  - [ ] Model WatchlistItem dengan romJson dan 	oJson selesai.
-  - [ ] StorageService mampu membaca, menyimpan, memperbarui, dan menghapus data JSON dari shared_preferences.
-  - [ ] Penanganan kasus data kosong (*empty list*) dan error parsing ditangani secara aman.
-  - [ ] Commit git dibuat.
+  - [x] Model Show dengan fromJson selesai dan teruji parser-nya.
+  - [x] Model WatchlistItem dengan fromJson dan toJson selesai.
+  - [x] StorageService mampu membaca, menyimpan, memperbarui, dan menghapus data JSON dari shared_preferences.
+  - [x] Penanganan kasus data kosong (*empty list*) dan error parsing ditangani secara aman.
+  - [x] Commit git dibuat.
 
 ---
 
